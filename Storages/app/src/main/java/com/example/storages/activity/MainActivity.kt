@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        callInternalActivity()
+        callExternalActivity()
     }
     private fun callInternalActivity()  {
         val btn_storage = findViewById<Button>(R.id.btn_storages)
