@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        callExternalActivity()
+        callPermissionsActivity()
     }
     private fun callInternalActivity()  {
         val btn_storage = findViewById<Button>(R.id.btn_storages)
@@ -23,6 +23,13 @@ class MainActivity : AppCompatActivity() {
         val btn_storage = findViewById<Button>(R.id.btn_storages)
         btn_storage.setOnClickListener {
             val intent=Intent(this,ExternalActivity::class.java)
+            startActivity(intent)
+        }
+    }
+    private fun callPermissionsActivity()  {
+        val btn_storage = findViewById<Button>(R.id.btn_storages)
+        btn_storage.setOnClickListener {
+            val intent=Intent(this,PermissionsActivity::class.java)
             startActivity(intent)
         }
     }
